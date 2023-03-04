@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 600px;
+}
+
+h1,
+p {
+  font-family: Lato;
+}
+
+#home,
+#favorite,
+#rated,
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: large;
+}
+
+#emptyPadding {
+  width: 120px;
+}
+
+#pageControl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  padding: 20px;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie-poster {
+  width: 100%;
+  object-fit: contain;
+}
+
+#movieTitle {
+  width: 100%;
+}
+
+.rating-favorite {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+}
+
+.favorite-page,
+.rated-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#favoriteTitle,
+#ratedTitle,
+#loginTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+#usernameInput,
+#passwordInput,
+#loginSubmitBtn {
+  width: 35vw;
+}
+
+#loggedName {
+  color: #33e3ff;
+  margin-left: 1em;
+}
+
+.movie-details-your-rating-container {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 1em;
+}
+
+.rated-page,
+.favorite-page,
+.login-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-details-rating-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
