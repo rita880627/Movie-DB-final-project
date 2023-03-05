@@ -6,7 +6,6 @@ import * as Actions from "./actions";
 import RatingSelector from "./components/RatingSelector";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import Button from "@mui/material/Button";
-import Alert from "@mui/material/Alert";
 import axios from "axios";
 import { getImgFullUrl } from "./helpers";
 
@@ -110,6 +109,14 @@ const MovieDetails = () => {
       yourRating = ratedMovie[0].rating;
     }
   }
+  
+   function waitLoad() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("resolved");
+      }, 500);
+    });
+  }
 
   const handleRating = async () => {
     if (isLoggedIn) {
@@ -120,6 +127,7 @@ const MovieDetails = () => {
             value: score
           }
         );
+        await waitLoad();
         const ratedData = await axios.get(
           `https://api.themoviedb.org/3/account/${username}/rated/movies?api_key=${API_KEY}&session_id=${sessionId}`
         );
